@@ -3,29 +3,29 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function RelatosSection() {
   const testimonials = [
     {
-      name: "Maria Silva",
+      name: "xxxxxxxxxx",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
-      text: "O KERIGMA mudou minha vida completamente. Aqui encontrei uma família que me acolheu e me ajudou a crescer na fé. Cada encontro é uma benção!"
+      text: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     },
     {
-      name: "João Santos",
+      name: "xxxxxxxxxx",
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
-      text: "Através do grupo descobri meu propósito e aprendi o verdadeiro significado da comunhão cristã. Somos mais que amigos, somos irmãos em Cristo."
+      text: "xxxxxxxxxxxxxxxxxxxx."
     },
     {
-      name: "Ana Costa",
+      name: "xxxxxxxxxx",
       image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
-      text: "Os momentos de oração e estudo da palavra têm fortalecido minha fé de forma incrível. Sou grata por fazer parte desta família abençoada."
+      text: "xxxxxxxxxxxxxxxxxxxxx"
     },
     {
-      name: "Pedro Lima",
+      name: "xxxxxxxxxx",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
-      text: "No KERIGMA aprendi que servir ao próximo é uma das maiores alegrias da vida cristã. Nossas ações sociais transformam não só a comunidade, mas a nós mesmos."
+      text: "xxxxxxxxxx"
     },
     {
-      name: "Carla Mendes",
+      name: "xxxxxxxxxx",
       image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150",
-      text: "Estar no KERIGMA é estar em casa. Aqui encontro apoio, amor e direcionamento espiritual. Cada membro é especial e único aos olhos de Deus."
+      text: "xxxxxxxxxxxxxxx."
     }
   ];
 
