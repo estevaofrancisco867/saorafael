@@ -4,25 +4,25 @@ import { Phone } from "lucide-react";
 export default function OrganizadorSection() {
   const leaders = [
     {
-      name: "Pastor Marcos",
-      role: "Líder Principal",
-      description: "Responsável pela coordenação geral e direcionamento espiritual do grupo",
+      name: "xxxxxxxxxxxxx",
+      role: "Coordenadora",
+      description: "xxxxxxxxxxxxxxxxx",
       phone: "(11) 99999-9999",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&h=200"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLRI-lBNToqlmKWX0JA42wI-19Z7AkPMeVWw&s"
     },
     {
-      name: "Líder Fernanda",
-      role: "Vice-Liderança",
-      description: "Apoio na coordenação e responsável pelas ações sociais do grupo",
-      phone: "(11) 88888-8888",
-      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&h=200"
+      name: "xxxxxxxxxxxxx",
+      role: "Coordenadora",
+      description: "xxxxxxxxxxxxxxxxx",
+      phone: "(11) 88888-888",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLRI-lBNToqlmKWX0JA42wI-19Z7AkPMeVWw&s"
     },
     {
-      name: "Rafael",
-      role: "Coordenador de Eventos",
-      description: "Organização de retiros, encontros especiais e atividades do grupo",
+      name: "xxxxxxxxxxxxx",
+      role: "Coordenadora",
+      description: "xxxxxxxxxxxxxxxxx",
       phone: "(11) 77777-7777",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&h=200"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLRI-lBNToqlmKWX0JA42wI-19Z7AkPMeVWw&s"
     }
   ];
 

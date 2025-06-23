@@ -4,24 +4,24 @@ import { Heart } from "lucide-react";
 export default function ExperienciasSection() {
   const experiences = [
     {
-      image: "https://images.unsplash.com/photo-1507692049790-de58290a4334?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
-      title: "Retiro Espiritual 2023",
-      description: "Nosso último retiro foi uma experiência transformadora. Durante três dias, vivenciamos momentos intensos de oração, reflexão e comunhão. Muitos jovens relataram experiências profundas de encontro com Deus.",
-      additionalText: "O tema \"Renovados em Cristo\" marcou a vida de cada participante, fortalecendo nossa fé e nossos laços como família espiritual.",
+      image: "https://static.vecteezy.com/ti/vetor-gratis/t1/8953369-transparente-fundo-png-textura-fundo-transparente-grade-gratis-vetor.jpg",
+      title: "XXXXXXXXXXXXXXX",
+      description: "XXXXXXXXXXXXXXX",
+      additionalText: "XXXXXXXXXXXXXXX",
       reverse: false
     },
     {
-      image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
-      title: "Ação Social na Comunidade",
-      description: "Mensalmente organizamos ações sociais que impactam diretamente nossa comunidade. Desde distribuição de alimentos até atividades com crianças em situação de vulnerabilidade.",
-      additionalText: "Essas experiências nos ensinam sobre o amor prático e como podemos ser as mãos e os pés de Jesus no mundo.",
+      image: "https://static.vecteezy.com/ti/vetor-gratis/t1/8953369-transparente-fundo-png-textura-fundo-transparente-grade-gratis-vetor.jpg",
+      title: "XXXXXXXXXXXXXXX",
+      description: "XXXXXXXXXXXXXXXXXXXX",
+      additionalText: "XXXXXXXXXXXXXXXXXXXX",
       reverse: true
     },
     {
-      image: "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
-      title: "Ministério de Louvor",
-      description: "Nosso grupo desenvolveu um ministério de louvor que toca o coração de toda a congregação. Através da música, expressamos nossa devoção e levamos outros à presença de Deus.",
-      additionalText: "Cada apresentação é uma oportunidade de ministir e ser ministrado, criando momentos únicos de adoração genuína.",
+      image: "https://static.vecteezy.com/ti/vetor-gratis/t1/8953369-transparente-fundo-png-textura-fundo-transparente-grade-gratis-vetor.jpg",
+      title: "XXXXXXXXXXXXXXX",
+      description: "XXXXXXXXXXXXXXXXXXXX",
+      additionalText: "XXXXXXXXXXXXXXXXXXXX",
       reverse: false
     }
   ];

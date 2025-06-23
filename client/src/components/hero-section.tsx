@@ -26,7 +26,7 @@ export default function HeroSection() {
             onClick={() => scrollToSection('historia')}
             className="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
           >
-            Conheça nossa história
+            SEJA BEM-VINDO AO NOSSO SITE
           </button>
         </div>
       </div>

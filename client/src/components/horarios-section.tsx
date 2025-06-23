@@ -40,8 +40,8 @@ export default function HorariosSection() {
                 <Calendar className="text-4xl mb-4 mx-auto" />
                 <h3 className="text-2xl font-bold mb-2">Reunião Semanal</h3>
                 <div className="space-y-2">
-                  <p className="text-xl font-semibold">Sábados</p>
-                  <p className="text-lg">19:00 às 21:00</p>
+                  <p className="text-xl font-semibold">Quartas-feiras</p>
+                  <p className="text-lg">19:00 às 20:00</p>
                 </div>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
