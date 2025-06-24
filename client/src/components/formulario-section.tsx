@@ -4,8 +4,7 @@ import { Users, Edit } from "lucide-react";
 
 export default function FormularioSection() {
   const handleFormClick = () => {
-    // This would link to an external form
-    window.open('#', '_blank');
+    window.open("https://forms.gle/SfHEkebqubVCWDf26", "_blank");
   };
 
   return (

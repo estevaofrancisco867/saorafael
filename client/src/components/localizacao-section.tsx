@@ -4,7 +4,7 @@ import { MapPin, Route, ExternalLink } from "lucide-react";
 
 export default function LocalizacaoSection() {
   const handleMapClick = () => {
-    window.open('https://maps.google.com', '_blank');
+    window.open('https://www.google.com/maps/place/Par%C3%B3quia+S%C3%A3o+Rafael+-+Ibipor%C3%A3/@-23.2799951,-51.0759082,17z/data=!3m1!4b1!4m6!3m5!1s0x94eb46c995436f29:0x3db58b21054db757!8m2!3d-23.28!4d-51.0733333!16s%2Fg%2F1tc_57s0?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D', '_blank');
   };
 
   return (
@@ -14,57 +14,46 @@ export default function LocalizacaoSection() {
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Localização</h2>
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </div>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <Card className="bg-blue-50 border-blue-200">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  <MapPin className="text-2xl text-primary mt-1" />
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Endereço da Igreja</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      Rua da Esperança, 123<br />
-                      Bairro Jardim da Paz<br />
-                      São Paulo - SP<br />
-                      CEP: 01234-567
-                    </p>
-                  </div>
+        <div className="max-w-lg mx-auto space-y-6">
+          <Card className="bg-blue-50 border-blue-200">
+            <CardContent className="p-6">
+              <div className="flex items-start space-x-4">
+                <MapPin className="text-2xl text-primary mt-1" />
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Endereço da Igreja</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Rua Jaguapita, 40<br />
+                    Bairro San Rafael<br />
+                    Ibiporã - PR<br />
+                    CEP: 86200-000
+                  </p>
                 </div>
-              </CardContent>
-            </Card>
-            <Card className="bg-blue-50 border-blue-200">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  <Route className="text-2xl text-primary mt-1" />
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Como Chegar</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      <strong>Transporte Público:</strong> Metrô Linha Azul - Estação Jardim da Paz (5 min a pé)<br />
-                      <strong>Ônibus:</strong> Linhas 123, 456, 789<br />
-                      <strong>Carro:</strong> Estacionamento gratuito disponível
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <div className="text-center">
-              <Button
-                onClick={handleMapClick}
-                className="bg-primary text-white hover:bg-primary/90"
-              >
-                <ExternalLink className="mr-2 h-4 w-4" />
-                Ver no Google Maps
-              </Button>
-            </div>
-          </div>
-          <div className="bg-gray-200 rounded-lg shadow-lg overflow-hidden h-96">
-            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary to-blue-600 text-white cursor-pointer" onClick={handleMapClick}>
-              <div className="text-center">
-                <MapPin className="text-6xl mb-4 opacity-50 mx-auto" />
-                <p className="text-lg font-semibold">Mapa Interativo</p>
-                <p className="text-sm opacity-75">Clique para ver direções</p>
               </div>
-            </div>
+            </CardContent>
+          </Card>
+          <Card className="bg-blue-50 border-blue-200">
+            <CardContent className="p-6">
+              <div className="flex items-start space-x-4">
+                <Route className="text-2xl text-primary mt-1" />
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Informações adicionais</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    <strong>Religião:</strong> Igreja católica<br />
+                    <strong>Bispo:</strong> Dom Geremias Steinmetz, Arcebispo Metropolitano da Arquidiocese.<br />
+                    <strong>PÁROCO:</strong> Padre Pedro (Desde 2025)
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          <div className="text-center">
+            <Button
+              onClick={handleMapClick}
+              className="bg-primary text-white hover:bg-primary/90"
+            >
+              <ExternalLink className="mr-2 h-4 w-4" />
+              Ver no Google Maps
+            </Button>
           </div>
         </div>
       </div>

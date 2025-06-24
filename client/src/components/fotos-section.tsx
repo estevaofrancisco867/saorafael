@@ -37,6 +37,10 @@ export default function FotosSection() {
     },
   ];
 
+  const handleVerMaisFotos = () => {
+    window.location.href = "/galeria.html";
+  };
+
   return (
     <section id="fotos" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,6 +50,7 @@ export default function FotosSection() {
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </div>
+
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
           {photos.map((photo, index) => (
             <img
@@ -56,8 +61,12 @@ export default function FotosSection() {
             />
           ))}
         </div>
+
         <div className="text-center">
-          <Button className="bg-primary text-white hover:bg-primary/90">
+          <Button
+            onClick={handleVerMaisFotos}
+            className="bg-primary text-white hover:bg-primary/90 transition-transform hover:scale-105"
+          >
             <Images className="mr-2 h-4 w-4" />
             Ver Mais Fotos
           </Button>

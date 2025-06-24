@@ -8,22 +8,20 @@ export default function ContatosSection() {
       icon: <Phone className="text-2xl" />,
       title: "Telefone",
       description: "Entre em contato conosco",
-      value: "(11) 98765-4321",
-      link: "tel:+5511987654321"
+      value: "(43) 3158-1444",
     },
     {
       icon: <Mail className="text-2xl" />,
       title: "Email",
       description: "Envie sua mensagem",
       value: "kerigma@igreja.com",
-      link: "mailto:kerigma@igreja.com"
     },
     {
       icon: <FaWhatsapp className="text-2xl" />,
       title: "WhatsApp",
       description: "Fale diretamente conosco",
       value: "(11) 98765-4321",
-      link: "https://wa.me/5511987654321"
+     
     }
   ];
 

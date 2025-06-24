@@ -26,15 +26,15 @@ export default function HistoriaSection() {
           </div>
           <div className="space-y-6">
             <p className="text-lg text-gray-600 leading-relaxed">
-             XXXXXXXXXX <strong>8 anos</strong> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+             XXXXXX <strong>8 anos</strong> xxxxxxxxx
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+              xxxxxxxxxxxxxx
             </p>
             <Card className="bg-blue-50 border-blue-200">
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-primary mb-2">Tempo de Atividade</h3>
-                <p className="text-gray-700">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                <p className="text-gray-700">XXXXXXXXXXX</p>
               </CardContent>
             </Card>
             <Button

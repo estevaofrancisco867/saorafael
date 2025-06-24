@@ -21,37 +21,37 @@ export default function Navigation() {
               KERIGMA
             </h1>
           </div>
-          
+
           {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <button
                 onClick={() => scrollToSection('historia')}
-                className="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium"
+                className="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md text-base font-medium"
               >
                 História
               </button>
               <button
                 onClick={() => scrollToSection('fotos')}
-                className="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium"
+                className="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md text-base font-medium"
               >
                 Fotos
               </button>
               <button
                 onClick={() => scrollToSection('experiencias')}
-                className="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium"
+                className="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md text-base font-medium"
               >
                 Experiências
               </button>
               <button
                 onClick={() => scrollToSection('formulario')}
-                className="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium"
+                className="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md text-base font-medium"
               >
                 Formulário
               </button>
               <button
                 onClick={() => scrollToSection('organizador')}
-                className="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium"
+                className="text-gray-700 hover:text-primary transition-colors px-3 py-2 rounded-md text-base font-medium"
               >
                 Organizador
               </button>
@@ -76,31 +76,31 @@ export default function Navigation() {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               <button
                 onClick={() => scrollToSection('historia')}
-                className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left"
+                className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-lg font-medium w-full text-left"
               >
                 História
               </button>
               <button
                 onClick={() => scrollToSection('fotos')}
-                className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left"
+                className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-lg font-medium w-full text-left"
               >
                 Fotos
               </button>
               <button
                 onClick={() => scrollToSection('experiencias')}
-                className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left"
+                className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-lg font-medium w-full text-left"
               >
                 Experiências
               </button>
               <button
                 onClick={() => scrollToSection('formulario')}
-                className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left"
+                className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-lg font-medium w-full text-left"
               >
                 Formulário
               </button>
               <button
                 onClick={() => scrollToSection('organizador')}
-                className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left"
+                className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-lg font-medium w-full text-left"
               >
                 Organizador
               </button>
