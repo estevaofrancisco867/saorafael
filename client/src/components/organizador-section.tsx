@@ -1,29 +1,55 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone } from "lucide-react";
 
 export default function OrganizadorSection() {
   const leaders = [
     {
-      name: "xxxxxxxxxxxxx",
-      role: "Coordenadora",
-      description: "xxxxxxxxxxxxxxxxx",
-      phone: "(11) 99999-9999",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLRI-lBNToqlmKWX0JA42wI-19Z7AkPMeVWw&s"
+      name: "Ingrid da Rick",
+      role: "Auxiliar",
+      description: (
+        <>
+          “Sejam fortes e corajosos. Não tenham medo nem fiquem apavorados, porque o Senhor teu Deus vai com vocês, Ele nunca os deixará, nunca os abandonará.”{" "}
+          <span
+            className="inline-block bg-primary text-white italic font-semibold text-[0.65rem] px-2 py-0.5 rounded-md mt-1"
+          >
+            Deuteronômio 31:6
+          </span>
+        </>
+      ),
+      phone: "Desde 2025",
+      image: "/ing.jpg",
     },
     {
-      name: "xxxxxxxxxxxxx",
+      name: "Irmã Marcela",
       role: "Coordenadora",
-      description: "xxxxxxxxxxxxxxxxx",
-      phone: "(11) 88888-888",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLRI-lBNToqlmKWX0JA42wI-19Z7AkPMeVWw&s"
+      description: (
+        <>
+          “Eu mesmo buscarei as minhas ovelhas e as reunirei de onde foram espalhadas no dia de nuvens e escuridão; como um pastor no meio do rebanho disperso, eu irei ao encontro delas.”{" "}
+          <span
+            className="inline-block bg-primary text-white italic font-semibold text-[0.65rem] px-2 py-0.5 rounded-md mt-1"
+          >
+            Ezequiel 34:12
+          </span>
+        </>
+      ),
+      phone: "Desde de 2015",
+      image: "/irma.jpg",
     },
     {
-      name: "xxxxxxxxxxxxx",
+      name: "Rosana",
       role: "Coordenadora",
-      description: "xxxxxxxxxxxxxxxxx",
-      phone: "(11) 77777-7777",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLRI-lBNToqlmKWX0JA42wI-19Z7AkPMeVWw&s"
-    }
+      description: (
+        <>
+          “O amor é paciente e bondoso. Não inveja, nem se orgulha. Não busca interesses próprios. Alegra-se com a verdade. Tudo crê, espera e suporta.”{" "}
+          <span
+            className="inline-block bg-primary text-white italic font-semibold text-[0.65rem] px-2 py-0.5 rounded-md mt-1"
+          >
+            1 Coríntios 13:4-7
+          </span>
+        </>
+      ),
+      phone: "Desde 2025",
+      image: "/cord.jpg",
+    },
   ];
 
   return (
@@ -35,24 +61,28 @@ export default function OrganizadorSection() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {leaders.map((leader, index) => (
-            <Card key={index} className="bg-blue-50 border-blue-200 shadow-md text-center">
-              <CardContent className="p-6">
-                <img
-                  src={leader.image}
-                  alt={leader.name}
-                  className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-                />
-                <h3 className="text-xl font-semibold mb-2">{leader.name}</h3>
-                <p className="text-primary font-medium mb-2">{leader.role}</p>
-                <p className="text-gray-600 text-sm mb-4">{leader.description}</p>
+            <Card
+              key={index}
+              className="bg-blue-50 border-blue-200 shadow-md text-center"
+            >
+              <CardContent className="p-6 min-h-[320px] flex flex-col justify-between">
+                <div>
+                  <img
+                    src={leader.image}
+                    alt={leader.name}
+                    className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+                  />
+                  <h3 className="text-xl font-semibold mb-2">{leader.name}</h3>
+                  <p className="text-primary font-medium mb-2">{leader.role}</p>
+                </div>
+                <blockquote
+                  className="italic font-serif text-sm mb-4 px-4 border-l-2 border-r-2"
+                  style={{ borderColor: "hsl(213, 84%, 58%)" }}
+                >
+                  {leader.description}
+                </blockquote>
                 <div className="mt-4">
-                  <a
-                    href={`tel:${leader.phone.replace(/\D/g, '')}`}
-                    className="text-primary hover:underline inline-flex items-center"
-                  >
-                    <Phone className="mr-1 h-4 w-4" />
-                    {leader.phone}
-                  </a>
+                  <span className="text-primary">{leader.phone}</span>
                 </div>
               </CardContent>
             </Card>
@@ -62,3 +92,6 @@ export default function OrganizadorSection() {
     </section>
   );
 }
+
+
+

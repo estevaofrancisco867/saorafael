@@ -7,28 +7,28 @@ export default function RedesSociaisSection() {
       icon: <FaInstagram className="text-4xl" />,
       name: "Instagram",
       handle: "@kerigma_jovens",
-      link: "#",
+      link: "https://www.instagram.com/kerigma_jovens?igsh=M3c5NmdxOHlycWx5",
       bgColor: "bg-gradient-to-br from-purple-400 to-pink-400"
     },
     {
       icon: <FaFacebook className="text-4xl" />,
       name: "Facebook",
-      handle: "KERIGMA Jovens",
-      link: "#",
+      handle: "Paróquia São Rafael",
+      link: "https://www.facebook.com/share/16cFHfa1L5/",
       bgColor: "bg-blue-600"
     },
     {
       icon: <FaYoutube className="text-4xl" />,
       name: "YouTube",
-      handle: "KERIGMA Channel",
-      link: "#",
+      handle: "Paróquia São Rafael Ibiporã",
+      link: "https://youtube.com/@paroquiasaorafaelibipora1903?si=iQlH8Yit9UewAwW0",
       bgColor: "bg-red-600"
     },
     {
       icon: <FaTiktok className="text-4xl" />,
       name: "TikTok",
-      handle: "@kerigma_jovens",
-      link: "#",
+      handle: "@kerigma.jovens",
+      link: "https://www.tiktok.com/@kerigma.jovens?_t=ZM-8y9KM1qcuC0&_r=1",
       bgColor: "bg-gray-900"
     }
   ];

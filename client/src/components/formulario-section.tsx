@@ -4,7 +4,7 @@ import { Users, Edit } from "lucide-react";
 
 export default function FormularioSection() {
   const handleFormClick = () => {
-    window.open("https://forms.gle/SfHEkebqubVCWDf26", "_blank");
+    window.open("https://forms.gle/BGsSGj2FqwDXUHgR8");
   };
 
   return (

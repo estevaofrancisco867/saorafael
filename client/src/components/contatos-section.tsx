@@ -9,20 +9,22 @@ export default function ContatosSection() {
       title: "Telefone",
       description: "Entre em contato conosco",
       value: "(43) 3158-1444",
+      link: "tel:+554331581444",
     },
     {
       icon: <Mail className="text-2xl" />,
       title: "Email",
       description: "Envie sua mensagem",
-      value: "kerigma@igreja.com",
+      value: "psaorafaelibipora@gmail.com",
+      link: "mailto:psaorafaelibipora@gmail.com",
     },
     {
       icon: <FaWhatsapp className="text-2xl" />,
       title: "WhatsApp",
       description: "Fale diretamente conosco",
-      value: "(11) 98765-4321",
-     
-    }
+      value: "(43) 3158-1444",
+      link: "https://wa.me/554331581444",
+    },
   ];
 
   return (
@@ -32,10 +34,15 @@ export default function ContatosSection() {
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Contatos</h2>
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
+
+        {/* Grid responsivo */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {contacts.map((contact, index) => (
-            <Card key={index} className="shadow-lg text-center hover:shadow-xl transition-shadow">
-              <CardContent className="p-6">
+            <Card
+              key={index}
+              className="h-full shadow-lg text-center hover:shadow-xl transition-shadow flex flex-col"
+            >
+              <CardContent className="p-6 flex flex-col flex-grow">
                 <div className="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   {contact.icon}
                 </div>
@@ -43,7 +50,8 @@ export default function ContatosSection() {
                 <p className="text-gray-600 mb-4">{contact.description}</p>
                 <a
                   href={contact.link}
-                  className="text-primary hover:underline font-medium"
+                  className="mt-auto text-primary hover:underline font-medium break-words text-center"
+                  style={{ wordBreak: "break-word" }}
                 >
                   {contact.value}
                 </a>
@@ -55,3 +63,4 @@ export default function ContatosSection() {
     </section>
   );
 }
+

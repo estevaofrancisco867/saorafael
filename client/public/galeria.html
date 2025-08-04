@@ -30,23 +30,77 @@
 
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
   
-        <img src="https://picsum.photos/300?1" alt="Evento 1" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
-        <img src="https://picsum.photos/300?2" alt="Evento 2" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
-        <img src="https://picsum.photos/300?3" alt="Evento 3" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
-        <img src="https://picsum.photos/300?4" alt="Evento 4" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
-        <img src="https://picsum.photos/300?5" alt="Evento 5" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
-        <img src="https://picsum.photos/300?6" alt="Evento 6" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
-        <img src="https://picsum.photos/300?7" alt="Evento 7" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
-        <img src="https://picsum.photos/300?8" alt="Evento 8" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
+        <img src="/25.jpeg" alt="Evento 1" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
+        <img src="/17.jpeg"" alt="Evento 2" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
+        <img src="/3.jpeg" alt="Evento 3" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
+        <img src="/11.jpeg" alt="Evento 4" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
+        <img src="/5.jpeg"  alt="Evento 5" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
+        <img src="/22.jpeg" alt="Evento 6" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
+        <img src="/23.jpeg" alt="Evento 7" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
+        <img src="/24.jpeg" alt="Evento 8" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
+        <img src="/54.jpeg" alt="Evento 9" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
+        <img src="/55.jpeg" alt="Evento 10" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
+        <img src="/56.jpeg" alt="Evento 11" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
+        <img src="/57.jpeg" alt="Evento 12" class="rounded-lg shadow-md hover-zoom aspect-square object-cover" />
       
       </div>
 
-      <div class="text-center mt-12">
-        <a href="index.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition transform hover:scale-105">
-          Voltar para o Início
-        </a>
+        <div class="text-center mt-12">
+          <a href="/" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition transform hover:scale-105">
+            Voltar para o Início
+          </a>
+        </div>
       </div>
     </div>
   </section>
+  <!-- Player oculto do YouTube -->
+  <div id="hidden-player" style="display:none;"></div>
+
+  <script>
+    // Carrega a API do YouTube
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+
+    var player;
+
+    // Função chamada pela API quando estiver pronta
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('hidden-player', {
+        height: '0',
+        width: '0',
+        videoId: 'f9VS9z3L9RQ', // mesmo vídeo que no React
+        playerVars: {
+          autoplay: 0,
+          loop: 1,
+          playlist: 'f9VS9z3L9RQ',
+        },
+        events: {
+          'onReady': onPlayerReady,
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      event.target.setVolume(100);
+
+      // Se localStorage indicar música tocando, já inicia o vídeo
+      if (localStorage.getItem('musicPlaying') === 'true') {
+        event.target.playVideo();
+      }
+    }
+
+    // Escuta alterações no localStorage para sincronizar pausas e plays
+    window.addEventListener('storage', function(event) {
+      if (event.key === 'musicPlaying') {
+        if (event.newValue === 'true') {
+          player.playVideo();
+        } else if (event.newValue === 'false') {
+          player.pauseVideo();
+        }
+      }
+    });
+  </script>
+
 </body>
 </html>

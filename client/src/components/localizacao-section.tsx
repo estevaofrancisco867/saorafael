@@ -38,9 +38,10 @@ export default function LocalizacaoSection() {
                 <div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Informações adicionais</h3>
                   <p className="text-gray-600 leading-relaxed">
+                    <strong>Igreja:</strong> Paróquia São Rafael<br />
                     <strong>Religião:</strong> Igreja católica<br />
                     <strong>Bispo:</strong> Dom Geremias Steinmetz, Arcebispo Metropolitano da Arquidiocese.<br />
-                    <strong>PÁROCO:</strong> Padre Pedro (Desde 2025)
+                    <strong>Pároco:</strong> Padre Pedro (Desde 2025)
                   </p>
                 </div>
               </div>

@@ -60,15 +60,16 @@ export default function Footer() {
             <div className="space-y-2 text-blue-100">
               <p className="flex items-center">
                 <Phone className="mr-2 h-4 w-4" />
-                (11) 98765-4321
+                Paróquia São Rafael
               </p>
               <p className="flex items-center">
                 <Mail className="mr-2 h-4 w-4" />
-                kerigma@igreja.com
+
+                psaorafaelibipora@gmail.com
               </p>
               <p className="flex items-center">
                 <MapPin className="mr-2 h-4 w-4" />
-                São Paulo - SP
+                Ibiporã - PR
               </p>
             </div>
           </div>
