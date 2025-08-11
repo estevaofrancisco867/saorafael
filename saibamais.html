@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>História Completa do Grupo Kerigma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Cor primária igual seu projeto */
+      .bg-primary {
+        background-color: #3b82f6;
+      } /* azul Tailwind */
+      .text-primary {
+        color: #3b82f6;
+      }
+      .hover\:bg-primary\/90:hover {
+        background-color: rgba(59, 130, 246, 0.9);
+      }
+
+      /* Para dar efeito “reportagem”, vou usar uma fonte serifada para o texto principal */
+      body {
+        font-family: "Merriweather", serif;
+        background-color: #f9fafb;
+      }
+
+      /* Título com serif e contraste */
+      h1,
+      h2 {
+        font-family: "Georgia", serif;
+      }
+      figure.story-image {
+        margin: 2.5rem auto;
+        text-align: center;
+        max-width: 480px;
+        background-color: #ffffff;
+        padding: 0.75rem;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      figure.story-image img {
+        border-radius: 0.35rem;
+        width: 100%;
+        max-height: 320px;
+        object-fit: cover;
+      }
+
+      figure.story-image figcaption {
+        margin-top: 0.6rem;
+        font-size: 0.85rem;
+        color: #64748b;
+        font-style: italic;
+      }
+
+
+
+      /* Estilo para drop caps na primeira letra */
+      article.prose {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.125rem;
+        line-height: 1.8;
+        color: #4b5563;
+      }
+
+      .drop-cap:first-letter {
+        float: left;
+        font-size: 4rem;
+        line-height: 1;
+        padding-right: 0.15em;
+        padding-left: 0.05em;
+        font-weight: 700;
+        color: #3b82f6;
+        font-family: "Georgia", serif;
+      }
+      .content-box {
+        background-color: #f0f9ff;
+        border-radius: 0.75rem;
+        box-shadow: 0 8px 24px rgba(59, 130, 246, 0.05);
+      }
+      .underline-primary {
+        width: 80px;
+        height: 4px;
+        background-color: #3b82f6;
+        margin: 0.5rem auto 2rem auto;
+        border-radius: 2px;
+      }
+
+      /* Sombra leve na imagem */
+      .image-shadow {
+        box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+        border-radius: 0.5rem;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        max-height: 400px;
+      }
+
+      /* Box quotes estilizado */
+      blockquote {
+        border-left: 4px solid #3b82f6;
+        padding-left: 1rem;
+        font-style: italic;
+        color: #374151;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        background: #eff6ff;
+        border-radius: 0.5rem;
+        font-size: 1.1rem;
+      }
+
+      /* Melhor espaçamento e estilo para parágrafos */
+      p {
+        line-height: 1.8;
+        text-indent: 2em; /* recuo na primeira linha */
+        margin-bottom: 1rem; /* menos espaçamento entre parágrafos */
+        color: #4b5563;
+      }
+
+      /* Exceto o primeiro parágrafo */
+      p:first-of-type {
+        text-indent: 0;
+        margin-top: 0;
+      }
+      .story-frame {
+        background-color: #ffffff;
+        border-left: 6px solid #3b82f6;
+        border-right: 6px solid #3b82f6; /* adiciona a barra do lado direito */
+        padding: 2rem 2rem 2rem 2rem; /* ajusta o padding para não ficar muito colado nas barras */
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+        border-radius: 0.5rem;
+        font-family: "Georgia", serif;
+      }
+
+      /* Estilo do versículo */
+      .verse {
+        display: block;
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: #f0f9ff;
+        border-left: 4px solid #3b82f6;
+        font-size: 1.1rem;
+        font-weight: bold;
+        font-style: italic;
+        color: #1d4ed8;
+        border-radius: 0.5rem;
+      }
+
+      /* Para melhor leitura em telas largas */
+      @media (min-width: 768px) {
+        .content-width {
+          max-width: 720px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      /* Estilo para texto em destaque (em azul) */
+      .highlight {
+        color: #3b82f6;
+        font-weight: bold;
+      }
+    </style>
+
+    <!-- Fonte serifada do Google Fonts Merriweather -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-50">
+    <main class="py-16 px-6 sm:px-12 lg:px-24">
+      <!-- Cabeçalho -->
+      <header class="text-center mb-12 max-w-3xl mx-auto">
+        <h1 class="text-5xl font-bold text-gray-900 leading-tight">
+          A Jornada do Grupo Kerigma
+        </h1>
+        <div class="underline-primary"></div>
+        <p class="text-gray-600 mt-2 text-lg font-semibold italic">
+          Um relato profundo da fé, união e perseverança.
+        </p>
+      </header>
+
+      <!-- Conteúdo da reportagem -->
+      <article
+        class="prose prose-lg max-w-none content-width mx-auto text-gray-800 drop-cap"
+      >
+        <article class="prose prose-lg max-w-none content-width mx-auto text-gray-800 drop-cap">
+
+        <!-- Depois -->
+                    <div class="story-frame mx-auto max-w-5xl">
+                      <div class="content-box p-6 sm:p-10">
+                        <article class="prose prose-lg max-w-none text-gray-800 drop-cap">
+        
+        <p>
+          Apesar de um cenário inicialmente desfavorável,
+          <span class="highlight"> Irmã Marcela</span> nunca desistiu. Com seu
+          dom de atrair e comover os jovens, ela conseguiu cativar aos poucos um
+          número crescente de participantes. O pequeno salão que antes era
+          utilizado já não comportava a quantidade de pessoas, e logo foi
+          necessário substituí-lo por um espaço maior, que pudesse abrigar todos
+          os que se sentiam chamados a fazer parte daquele movimento de fé.
+        </p>
+        <p>
+          Foi nesse momento de crescimento e de maior reflexão que Irmã Marcela se lembrou de algo fundamental para o grupo: o propósito central de sua missão. Ela sabia que o que estava criando não era apenas um grupo de jovens, mas uma verdadeira comunidade de fé, onde o anúncio do Evangelho seria vivido intensamente. Foi então que, inspirada pela palavra "<span class="highlight">Kerigma</span>" – que significa "anúncio da boa nova" – ela decidiu dar esse nome ao grupo. <span class="highlight"> O Kerigma, no contexto cristão, é o anúncio essencial da fé, a mensagem central sobre Jesus Cristo: sua morte, ressurreição e a salvação que oferece.</span> Esse nome, com sua profunda carga de significado, refletia perfeitamente o que ela desejava para o grupo: ser um espaço onde a fé fosse proclamada com vigor e verdade.
+        </p>
+
+        <p>
+          A cada encontro, o grupo
+          <span class="highlight">Kerigma</span> se fortalecia ainda
+          mais. Irmã Marcela, com sua liderança carinhosa e sua capacidade de
+          transmitir a palavra de Deus de forma simples e profunda, conseguiu
+          estabelecer um vínculo forte entre os jovens. Eles não eram apenas um
+          grupo de amigos, mas uma verdadeira comunidade de fé, unida pela busca
+          do propósito de vida cristã. O crescimento foi constante, e com isso,
+          surgiram novas atividades e projetos. Marcela sabia que não se tratava
+          apenas de reunir pessoas, mas de formar discípulos que fossem capazes
+          de viver a mensagem do Evangelho em suas vidas cotidianas. <span class="highlight"> Assim,
+          começaram a surgir momentos de oração, retiros espirituais e até ações
+          sociais, onde o grupo se envolvia em causas de solidariedade, ajudando
+          os mais necessitados da comunidade.</span>
+        </p>
+
+                          <figure class="story-image">
+                            <img
+                              src="https://scontent.fldb11-1.fna.fbcdn.net/v/t1.6435-9/120888000_808370883334771_7766848337460417292_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=hodW5iGO7SMQ7kNvwGg-jov&_nc_oc=Adk4rkP2a4a8IBD47sMEMQmpyQleleATfe6Af-Ispoe_FEEBICSCL2XL9lS7DlW577I&_nc_zt=23&_nc_ht=scontent.fldb11-1.fna&_nc_gid=tCTgUz5BksVo8CC_QZIPcA&oh=00_AfSmjKMCPNiVEMVvgangcSckTz9krNzpydXKvSfSB3KLbw&oe=68B42BED"
+    alt="Irmã Marcela"
+                            />
+                            <figcaption>
+                              <strong>Irmã Marcela — a luz tranquila que guiava com fé o coração dos jovens</strong>
+                            </figcaption>
+                          </figure>
+
+        <p>
+          As funções assumidas pelos jovens ao longo do tempo foram se
+          expandindo, e o grupo
+          <span class="highlight">Kerigma</span> passou a ser presença
+          ativa em diversos momentos da Igreja. Os jovens, guiados pela
+          liderança de  <span class="highlight">Irmã Marcela</span>, começaram a se envolver na liturgia,
+          participando de celebrações e trazendo uma nova energia para os
+          rituais. A Páscoa e o Natal, que são marcos fundamentais na vida
+          cristã, passaram a ser celebrados de forma especial, com
+          apresentações, encenações e eventos que tocavam profundamente os
+          fiéis. Além dessas atividades, o grupo também desempenhava outras funções dentro da paróquia. Os jovens estavam sempre presentes nas novenas, participando ativamente das celebrações e se tornando garções nas festividades de acolhimento.
+        </p>
+
+        <p>
+          Com o tempo, os
+          jovens foram se integrando ainda mais na vida da paróquia, assumindo
+          compromissos diversos, como no serviço litúrgico, <span class="highlight">onde muitos se
+          tornaram coroinhas e acólitos, muitos que também se integraram a catequeze: alguns sendo catequistas e outros catequizandos, muitos participando de grupos e encontros semanais e alguns até, assumindo lideranças.</span>
+        </p>
+
+       
+
+        <p>
+          Irmã Marcela enfrentou inúmeras dificuldades ao longo do percurso.
+          Além da dedicação à sua missão como irmã, ela ainda tinha que
+          conciliar sua vida de professora em uma escola católica com o papel de
+          liderança na paróquia. Era um equilíbrio delicado, mas ela assumia sua
+          responsabilidade com fé e compromisso.  <span class="highlight">Na Paróquia São Rafael, ela se
+          tornava o centro, o eixo que mantinha tudo funcionando. Marcela era o
+          "sol" e os jovens, os "planetas" que giravam ao seu redor, sendo
+          guiados pela sua luz e direção. Ela sabia que, se o "sol"
+          enfraquecesse, o movimento de todos ao seu redor também se
+          desestabilizaria</span>. Mas, apesar das dificuldades e dos desafios
+          enfrentados, não foi isso que aconteceu. Mesmo nos momentos mais
+          difíceis, quando parecia que tudo poderia desmoronar, ela nunca
+          desistiu.
+        </p>
+  <figure class="story-image">
+    <img
+      src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqI8cswQMfkBGFBjpeF7ZAUtIdMo3dESVv588cE7yGklN5mI1_WkbXRWNTPUy9gonBnxIK0PazNGa37IALdJIujPf2AiR6vowbtdISXGQe5t-glv4VV8CwrUsC9edQh0mB0ayg=s680-w680-h510-rw"
+  alt="Irmã Marcela"
+    />
+    <figcaption>
+      <strong>Presbitério da Paróquia — imagem de 2025 </strong>
+    </figcaption>
+
+    </figure>
+        <p>
+          Embora houvesse momentos de frustração e desânimo,<span class="highlight">Irmã Marcela </span> se mantinha
+          firme. <span class="highlight"> Ela se refugiava na oração, sabendo que, por mais que a vida se
+          tornasse árdua e que os jovens pudessem, por vezes, se dispersar ou se
+          afastar, sua missão era mais forte que qualquer obstáculo.</span> Ela
+          acreditava profundamente que sua persistência e fé seriam suficientes
+          para atrair os jovens novamente, para mantê-los unidos à Igreja e à
+          proposta do <span class="highlight">Kerigma</span>.
+        </p>
+
+        <p>
+          Com o passar dos anos, o número de jovens no grupo
+          <span class="highlight">Kerigma</span> aumentava cada vez mais,
+           <span class="highlight">atingindo a incrível marca de 50 ou mais participantes.</span> Isso trouxe
+          consigo a necessidade de expandir as atividades e o papel do grupo
+          dentro da paróquia. Não se tratava mais apenas de ocupar funções
+          dentro das missas solenes; o grupo se tornava uma verdadeira força
+          viva, com uma missão mais ampla, que ia além do espaço da Igreja.
+        </p>
+
+        <p>
+          Havia uma crescente demanda por experiências mais imersivas e
+          transformadoras, e Marcela sabia disso. Com isso, o
+          <span class="highlight">Kerigma</span> passou a organizar
+         viagens religiosas, que se tornaram fundamentais para fortalecer a fé e os laços entre os jovens.  <span class="highlight">Eles participaram de eventos como o PHN, um grande encontro de espiritualidade e testemunhos inspiradores. Também visitaram lugares como o sítio da Igreja São Sebastião, ideal para retiros e momentos de oração e convivência. O Santuário Diocesano de São Miguel Arcanjo foi outro destino marcante, propício para aprofundar os ensinamentos da fé.</span> Essas viagens se tornaram marcos na história do grupo, oferecendo oportunidades de sair da rotina e viver uma conexão mais profunda com Deus e com os outros.
+
+
+      </p>
+      <p>
+        Outro aspecto importante dos encontros era o estudo bíblico.  <span class="highlight">Irmã Marcela </span> não apenas ensinava, mas também incentivava os jovens a se aprofundarem na Palavra de Deus e a aplicá-la no dia a dia. Havia ainda um momento especial de escuta, em que a irmã ouvia cada jovem com paciência, permitindo o compartilhamento de alegrias e dificuldades. Esse espaço fortalecia a convivência e criava um ambiente de confiança mútua entre os próprios jovens. Quando alguém enfrentava dificuldades, o grupo se unia para ajudar.  <span class="highlight">Em um dos casos, organizaram uma rifa para custear a passagem de um jovem para um evento importante, mostrando o espírito de união e solidariedade que Marcela promovia entre eles.</span>
+
+
+      </p>
+      <p>
+         <span class="highlight">Em 2020</span>, a pandemia trouxe uma grande mudança para todos, e o grupo  <span class="highlight">Kerigma </span> não foi exceção. Por motivos de segurança, as atividades tiveram que ser interrompidas, e os encontros presenciais foram suspensos. Esse período de inatividade acabou sendo um desafio para muitos jovens, que, distantes da rotina e do apoio que o grupo proporcionava, acabaram se afastando. Quando o <span class="highlight"> Kerigma </span> pôde retornar, o número de participantes era bem mais baixo, e a  <span class="highlight">irmã Marcela </span> se viu diante de uma realidade que a fez lembrar os primeiros dias do grupo, quando tudo ainda estava em construção.
+      </p>
+      <p>
+        Marcela, no entanto, não se deixou abater. Ela retomou o processo de convite com a mesma energia de antes, buscando formas criativas de atrair os jovens de volta ao grupo. <span class="highlight"> Além de chamar os jovens que frequentavam as missas, ela fez questão de ir além, convocando também aqueles que estavam fora da Igreja.</span> Marcela sabia que a missão do Kerigma não se limitava aos que já estavam dentro da paróquia, mas precisava alcançar aqueles que ainda não haviam se sentido chamados a viver uma experiência de fé mais profunda.
+      </p>                    
+<p>
+  A irmã, com sua fé inabalável, mais uma vez superou os obstáculos e, com muito esforço, conseguiu reconquistar o grupo. Logo, o Kerigma estava novamente cheio de vida, com uma nova geração de jovens dispostos a seguir a jornada de fé e amizade
+</p>
+        <!-- Versículo destacado -->
+        <span class="verse">
+          “Qual de vós, tendo cem ovelhas, se perder uma delas, não deixa as noventa e nove no deserto e vai atrás da que se perdeu, até encontrá-la?” – 
+          <strong>Lucas 15:4</strong>
+        </span>
+      </article>
+          
+          </div>
+      <div class="text-center mt-12">
+                        <a href="/" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition transform hover:scale-105">
+                          Voltar para o Início
+                        </a>
+                      </div>
+    </main>
+                      <!-- Player oculto do YouTube -->
+                      <div id="hidden-player" style="display:none;"></div>
+
+                      <script>
+                        // Carrega a API do YouTube
+                        var tag = document.createElement('script');
+                        tag.src = "https://www.youtube.com/iframe_api";
+                        document.body.appendChild(tag);
+
+                        var player;
+
+                        // Função chamada pela API quando estiver pronta
+                        function onYouTubeIframeAPIReady() {
+                          player = new YT.Player('hidden-player', {
+                            height: '0',
+                            width: '0',
+                            videoId: 'f9VS9z3L9RQ', // mesmo vídeo que no React
+                            playerVars: {
+                              autoplay: 0,
+                              loop: 1,
+                              playlist: 'f9VS9z3L9RQ',
+                            },
+                            events: {
+                              'onReady': onPlayerReady,
+                            }
+                          });
+                        }
+
+                        function onPlayerReady(event) {
+                          event.target.setVolume(100);
+
+                          // Se localStorage indicar música tocando, já inicia o vídeo
+                          if (localStorage.getItem('musicPlaying') === 'true') {
+                            event.target.playVideo();
+                          }
+                        }
+
+                        // Escuta alterações no localStorage para sincronizar pausas e plays
+                        window.addEventListener('storage', function(event) {
+                          if (event.key === 'musicPlaying') {
+                            if (event.newValue === 'true') {
+                              player.playVideo();
+                            } else if (event.newValue === 'false') {
+                              player.pauseVideo();
+                            }
+                          }
+                        });
+                      </script>
+
+  </body>
+</html>
+
+
+
