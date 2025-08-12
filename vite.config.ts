@@ -4,11 +4,10 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { fileURLToPath } from "url";
 
-// Resolver caminho do arquivo atual (vite.config.ts)
+// Converter import.meta.url para caminho de arquivo (necessário para path.resolve)
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Função para configurar plugins dinamicamente
 async function getPlugins() {
   const basePlugins = [react(), runtimeErrorOverlay()];
 
@@ -20,31 +19,32 @@ async function getPlugins() {
   return basePlugins;
 }
 
-// Exportar configuração
-export default defineConfig(async () => ({
-  base: "/saorafael/",  // base para Github Pages
+export default defineConfig(async () => {
+  return {
+    base: "/saorafael/", // importante para GitHub Pages
 
-  plugins: await getPlugins(),
+    plugins: await getPlugins(),
 
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "client", "src"),
-      "@shared": path.resolve(__dirname, "shared"),
-      "@assets": path.resolve(__dirname, "attached_assets"),
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "client", "src"),
+        "@shared": path.resolve(__dirname, "shared"),
+        "@assets": path.resolve(__dirname, "attached_assets"),
+      },
     },
-  },
 
-  root: path.resolve(__dirname), // raiz é a pasta do vite.config.ts
+    root: path.resolve(__dirname, "client"), // ** raiz do cliente onde está o index.html **
 
-  build: {
-    outDir: path.resolve(__dirname, "dist", "public"),
-    emptyOutDir: true,
-  },
-
-  server: {
-    fs: {
-      strict: true,
-      deny: ["**/.*"],
+    build: {
+      outDir: path.resolve(__dirname, "dist/public"),
+      emptyOutDir: true,
     },
-  },
-}));
+
+    server: {
+      fs: {
+        strict: true,
+        deny: ["**/.*"],
+      },
+    },
+  };
+});
