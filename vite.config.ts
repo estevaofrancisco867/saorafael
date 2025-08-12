@@ -36,7 +36,7 @@ export default defineConfig(async () => {
       },
     },
 
-    root: path.resolve(__dirname, "client"),
+    root: path.resolve(__dirname), // <-- ALTERADO para raiz do projeto
 
     build: {
       outDir: path.resolve(__dirname, "dist/public"),
