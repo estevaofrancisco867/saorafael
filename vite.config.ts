@@ -4,15 +4,13 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { fileURLToPath } from "url";
 
-// Converter o import.meta.url para caminho de arquivo (necessário para path.resolve)
+// Converter import.meta.url para caminho de arquivo (necessário para path.resolve)
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Função para configurar plugins dinamicamente
 async function getPlugins() {
   const basePlugins = [react(), runtimeErrorOverlay()];
-  
-  // Só adiciona o Cartographer se não for produção e estiver rodando no Replit
+
   if (process.env.NODE_ENV !== "production" && process.env.REPL_ID !== undefined) {
     const { cartographer } = await import("@replit/vite-plugin-cartographer");
     basePlugins.push(cartographer());
@@ -21,10 +19,9 @@ async function getPlugins() {
   return basePlugins;
 }
 
-// Exporta a configuração do Vite
 export default defineConfig(async () => {
   return {
-    base: "/saorafael/", // IMPORTANTE para GitHub Pages
+    base: "/saorafael/", // importante para GitHub Pages
 
     plugins: await getPlugins(),
 
@@ -36,7 +33,7 @@ export default defineConfig(async () => {
       },
     },
 
-    root: path.resolve(__dirname, "client"),
+    root: path.resolve(__dirname, "client"), // ** raiz do cliente onde está o index.html **
 
     build: {
       outDir: path.resolve(__dirname, "dist/public"),
@@ -46,7 +43,7 @@ export default defineConfig(async () => {
     server: {
       fs: {
         strict: true,
-        deny: ["**/.*"], // bloqueia acesso a arquivos ocultos
+        deny: ["**/.*"],
       },
     },
   };
