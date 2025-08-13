@@ -21,7 +21,7 @@ async function getPlugins() {
 
 export default defineConfig(async () => {
   return {
-    base: "/saorafael/", // importante para GitHub Pages
+    base: "/", // Alterado para root pois no Vercel o app roda na raiz
 
     plugins: await getPlugins(),
 
@@ -33,7 +33,7 @@ export default defineConfig(async () => {
       },
     },
 
-    root: path.resolve(__dirname, "client"), // ** raiz do cliente onde está o index.html **
+    root: path.resolve(__dirname, "client"), // raiz do cliente onde está o index.html
 
     build: {
       outDir: path.resolve(__dirname, "dist/public"),
