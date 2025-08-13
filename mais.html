@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mais Experiências</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-white text-gray-800">
+
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Mais Experiências</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Confira outras vivências transformadoras da juventude, momentos que marcaram nossa jornada de fé.
+        </p>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+      </div>
+
+      <!-- Experiência 1 -->
+      <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
+        <div>
+          <img src="/26.jpeg" alt="Dia das mães" class="rounded-lg shadow-lg w-full h-80 object-cover" />
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-4">DIA ESPECIAL DAS MÃES</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Tivemos mais uma experiência, mas dessa vez com nossas mães. Em parceria com a Irmã Marcela, a juventude da Paróquia São Rafael preparou uma noite especial em homenagem às mães que caminham conosco. Foi um momento de alegria, descontração e carinho, com dinâmicas, homenagens inspiradas em Maria, jantar e entrega de presentes. Celebramos o amor, a fé e a gratidão por essas mulheres que são exemplo de força e ternura. Foi uma vivência simples, mas cheia de significado, que fortaleceu nossos laços como juventude e comunidade. Nossa gratidão a todas as mães que participaram desse momento tão especial!
+          </p>
+        </div>
+      </div>
+
+      <!-- Experiência 2 -->
+      <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
+        <div class="md:order-2">
+          <img src="/34.jpeg" alt="Caminhada da Fé" class="rounded-lg shadow-lg w-full h-80 object-cover" />
+        </div>
+        <div class="md:order-1">
+          <h3 class="text-2xl font-bold mb-4">TERÇO LUMINOSO PAROQUIAL</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Tivemos mais uma experiência incrível com a nossa juventude: o Terço Luminoso. Aconteceu à noite, na Paróquia São Rafael, e reuniu muita gente — não só os jovens, mas também várias famílias e outros cristãos da comunidade. Foi lindo ver todo mundo junto, rezando com fé, com as velas acesas iluminando a escuridão. A cada Ave-Maria, a gente sentia uma paz diferente, uma presença forte de Maria caminhando com a gente. Foi uma noite especial, de oração, luz e união. Saímos de lá com o coração leve e a fé renovada!
+          </p>
+        </div>
+      </div>
+
+      <!-- Experiência 3 -->
+      <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
+        <div>
+          <img src="/31.jpeg" alt="Adoração ao Santíssimo" class="rounded-lg shadow-lg w-full h-80 object-cover" />
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-4">CONFRATERNIZAÇÃO SOLIDÁRIA </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Durante o dia, tivemos uma confraternização solidária maravilhosa para a nossa comunidade paroquial, com um grande número de pessoas convidadas para confraternizar. Foi um momento cheio de alegria, troca de afetos e solidariedade, onde cada sorriso fez toda a diferença. A juventude esteve super ativa, ajudando na organização e assumindo o papel de garçons com muita dedicação, garantindo que todos se sentissem acolhidos e valorizados. Que possamos seguir juntos, sempre dispostos a ajudar!
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="index.html#experiencias">
+          <button class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition inline-flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v16h16M4 4l16 16" />
+            </svg>
+            <a href="/">
+            Voltar para o ínicio
+              </a>
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- Player oculto do YouTube -->
+  <div id="hidden-player" style="display:none;"></div>
+
+  <script>
+    // Carrega a API do YouTube
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+
+    var player;
+
+    // Função chamada pela API quando estiver pronta
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('hidden-player', {
+        height: '0',
+        width: '0',
+        videoId: 'f9VS9z3L9RQ', // mesmo vídeo que no React
+        playerVars: {
+          autoplay: 0,
+          loop: 1,
+          playlist: 'f9VS9z3L9RQ',
+        },
+        events: {
+          'onReady': onPlayerReady,
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      event.target.setVolume(100);
+
+      // Se localStorage indicar música tocando, já inicia o vídeo
+      if (localStorage.getItem('musicPlaying') === 'true') {
+        event.target.playVideo();
+      }
+    }
+
+    // Escuta alterações no localStorage para sincronizar pausas e plays
+    window.addEventListener('storage', function(event) {
+      if (event.key === 'musicPlaying') {
+        if (event.newValue === 'true') {
+          player.playVideo();
+        } else if (event.newValue === 'false') {
+          player.pauseVideo();
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
