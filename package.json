@@ -27,7 +27,6 @@
   "devDependencies": {
     "@replit/vite-plugin-cartographer": "^0.2.7",
     "@replit/vite-plugin-runtime-error-modal": "^0.0.3",
-    "@tailwindcss/postcss": "^4.1.12",
     "@vitejs/plugin-react": "^4.3.2",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
