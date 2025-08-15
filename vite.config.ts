@@ -4,7 +4,6 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { fileURLToPath } from "url";
 
-// Corrigir caminhos
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -14,15 +13,14 @@ export default defineConfig(async () => {
     runtimeErrorOverlay(),
   ];
 
-  // Adiciona plugin de replit em dev (opcional)
   if (process.env.NODE_ENV !== "production" && process.env.REPL_ID !== undefined) {
     const { cartographer } = await import("@replit/vite-plugin-cartographer");
     plugins.push(cartographer());
   }
 
   return {
-    base: "/", // raiz para produção/Vercel
-    root: __dirname, // ← ISSO É O MAIS IMPORTANTE! Usa a raiz real onde está index.html
+    base: "/",          // Use "/" para Vercel
+    root: __dirname,    // Raiz do projeto, onde está o index.html
     plugins,
     resolve: {
       alias: {
@@ -32,7 +30,7 @@ export default defineConfig(async () => {
       },
     },
     build: {
-      outDir: "dist", // onde gerar a build
+      outDir: path.resolve(__dirname, "dist/public"),
       emptyOutDir: true,
     },
     server: {
