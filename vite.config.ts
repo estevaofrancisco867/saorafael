@@ -9,8 +9,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 async function getPlugins() {
+  // Lista de plugins essenciais
   const basePlugins = [react(), runtimeErrorOverlay()];
 
+  // Verifica se está no ambiente de produção
   if (process.env.NODE_ENV !== "production" && process.env.REPL_ID !== undefined) {
     const { cartographer } = await import("@replit/vite-plugin-cartographer");
     basePlugins.push(cartographer());
@@ -21,29 +23,29 @@ async function getPlugins() {
 
 export default defineConfig(async () => {
   return {
-    base: "/", // Alterado para root pois no Vercel o app roda na raiz
+    base: "/", // Configurado para a raiz (Vercel geralmente roda na raiz)
 
-    plugins: await getPlugins(),
+    plugins: await getPlugins(), // Plugins definidos dinamicamente
 
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, "client", "src"),
-        "@shared": path.resolve(__dirname, "shared"),
-        "@assets": path.resolve(__dirname, "attached_assets"),
+        "@": path.resolve(__dirname, "client", "src"), // Alias para o código do cliente
+        "@shared": path.resolve(__dirname, "shared"), // Alias para código compartilhado
+        "@assets": path.resolve(__dirname, "attached_assets"), // Alias para assets
       },
     },
 
-    root: path.resolve(__dirname, "client"), // raiz do cliente onde está o index.html
+    root: path.resolve(__dirname, "client"), // Raiz do cliente onde está o index.html
 
     build: {
-      outDir: path.resolve(__dirname, "dist/public"),
-      emptyOutDir: true,
+      outDir: path.resolve(__dirname, "dist/public"), // Pasta de saída após o build
+      emptyOutDir: true, // Limpa a pasta de saída antes de gerar novos arquivos
     },
 
     server: {
       fs: {
-        strict: true,
-        deny: ["**/.*"],
+        strict: true,  // Validação de arquivos
+        deny: ["**/.*"], // Bloquear arquivos ocultos (ex: .env, .gitignore)
       },
     },
   };
