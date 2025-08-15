@@ -13,12 +13,14 @@ export default defineConfig(async () => {
   const plugins = [
     react(),
     runtimeErrorOverlay(),
+    ...(process.env.NODE_ENV !== "production" && process.env.REPL_ID !== undefined
+      ? [
+          await import("@replit/vite-plugin-cartographer").then((m) =>
+            m.cartographer(),
+          ),
+        ]
+      : []),
   ];
-
-  if (process.env.NODE_ENV !== "production" && process.env.REPL_ID !== undefined) {
-    const { cartographer } = await import("@replit/vite-plugin-cartographer");
-    plugins.push(cartographer());
-  }
 
   return {
     base: "/saorafael/", // IMPORTANTE para GitHub Pages, se não for GitHub Pages use "/"
