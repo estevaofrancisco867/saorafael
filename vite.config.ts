@@ -12,7 +12,7 @@ async function getPlugins() {
   // Lista de plugins essenciais
   const basePlugins = [react(), runtimeErrorOverlay()];
 
-  // Verifica se está no ambiente de produção
+  // Se você não usa Replit, esse bloco pode ser removido
   if (process.env.NODE_ENV !== "production" && process.env.REPL_ID !== undefined) {
     const { cartographer } = await import("@replit/vite-plugin-cartographer");
     basePlugins.push(cartographer());
@@ -23,7 +23,7 @@ async function getPlugins() {
 
 export default defineConfig(async () => {
   return {
-    base: "/", // Configurado para a raiz (Vercel geralmente roda na raiz)
+    base: "/", // Configurado para a raiz, ajuste para subdiretório se necessário
 
     plugins: await getPlugins(), // Plugins definidos dinamicamente
 
@@ -44,7 +44,7 @@ export default defineConfig(async () => {
 
     server: {
       fs: {
-        strict: true,  // Validação de arquivos
+        strict: true, // Validação de arquivos
         deny: ["**/.*"], // Bloquear arquivos ocultos (ex: .env, .gitignore)
       },
     },
